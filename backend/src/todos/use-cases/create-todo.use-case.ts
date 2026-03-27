@@ -4,6 +4,9 @@ import { CreateTodoDto } from "../dto/create-todo.dto";
 
 @Injectable ()
 export class CreateTodoUseCases {
+    create(createTodoDto: CreateTodoDto) {
+      throw new Error('Method not implemented.');
+    }
     constructor (
         private readonly createTodoRepository: CreateTodoRepository,
         private readonly logger: Logger,
