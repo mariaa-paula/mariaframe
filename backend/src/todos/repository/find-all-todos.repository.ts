@@ -3,9 +3,9 @@ import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class FindAllTodoRepository {
-    constructor(private readonly prisma: PrismaService) {}
+  constructor(private readonly prisma: PrismaService) {}
 
-async findAll (){
-   return await this.prisma.todo.FindMany();
-}
+  async findAll() {
+    return await this.prisma.todo.findMany();
+  }
 }

@@ -3,9 +3,9 @@ import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class FindTodoByIdRepository {
-    constructor(private readonly prisma: PrismaService) {}
+  constructor(private readonly prisma: PrismaService) {}
 
-async findById (Id: String ){
-   return await this.prisma.todo.findUnique({ where: {Id} });
-}
+  async findById(id: string) {
+    return await this.prisma.todo.findUnique({ where: { id } });
+  }
 }
